@@ -2,5 +2,8 @@
 
 simple project that was built in angular following the tutorials @ angular.io
 
-View: angular
-Model / Controller: Spring-boot
+# POST IT
+add / edit / delete / search posts
+
+View: ## angular
+Model / Controller: ## Spring-boot
