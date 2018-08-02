@@ -1,0 +1,35 @@
+<h2>
+  	Posts
+</h2>
+
+<div>
+	<label>Title:
+		<input #postTitle />
+	</label><br>
+	<label>Price:
+		<input #postPrice />
+	</label><br>
+	<label>Body:
+		<input #postBody />
+	</label><br>
+	<button class="btn btn-primary" 
+	 	    (click)="add(postTitle.value, postPrice.value, postBody.value)">
+	  Add post
+	</button>
+</div>
+<br>
+<ul class="list-group allPosts">
+	<li *ngFor="let post of posts">
+	    <a class="list-group-item" routerLink="/posts/{{post.id}}">
+		   <p class="badge">
+		   	 title: {{post.title}}<br>
+		     price: {{post.price}}<br>
+		     body: {{post.body}}
+		   </p>
+		</a>
+		<button class="btn btn-warning delete" title="delete post"
+				(click)="delete(post)">X</button>
+		<br>
+		<br>
+	</li>
+</ul>

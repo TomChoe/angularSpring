@@ -1,0 +1,23 @@
+<div *ngIf="post">
+
+  <h2>{{ post.title | uppercase }} Details</h2>
+  <div><span>id: </span>{{post.id}}</div>
+  <div><span>price: </span>{{post.price}}</div>
+  <div>
+    <label>title:
+      <input [(ngModel)]="post.title" placeholder="title">
+    </label><br>
+    <label>price:
+      <input [(ngModel)]="post.price" placeholder="price">
+    </label><br>
+    <label>body:
+      <input [(ngModel)]="post.body" placeholder="body">
+    </label>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="save()">Save Edit</button>
+  <br>
+  <br>
+  <button class="btn btn-primary" (click)="goBack()">back to posts</button>
+
+</div>
